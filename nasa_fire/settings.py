@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     
     'rest_framework',
     'djoser',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -128,4 +129,17 @@ DJOSER = {
     'LOGIN_FIELD': 'email',  # Change this to match your user model's login field
     'USER_CREATE_PASSWORD_RETYPE': True,
     'SERIALIZERS': {},
+}
+
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'Token': {
+            'type': 'apiKey',
+            'name': 'Authorization',
+            'in': 'header',
+        },
+    },
+    'USE_SESSION_AUTH': False,
+    'JSON_EDITOR': True,
+    'DEFAULT_INFO': 'your_project.api.views.schema_info',  # Replace with your schema information
 }
