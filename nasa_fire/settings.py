@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'djoser',
     'drf_yasg',
     
-    'authentication'
+    'authentication',
+    'iot'
 ]
 
 MIDDLEWARE = [
