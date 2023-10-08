@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'drf_yasg',
     
     'authentication',
-    'iot'
+    'iot',
+    'fire',
 ]
 
 MIDDLEWARE = [
